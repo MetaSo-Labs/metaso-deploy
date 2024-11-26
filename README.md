@@ -1,5 +1,8 @@
 # MetaSo
 
+[![English](https://img.shields.io/badge/English-README-blue)](README.md)
+[![中文](https://img.shields.io/badge/中文-README-red)](README-zh.md)
+
 MetaSo is an open-source decentralized service package based on MetaID-v2 and MAN. It integrates fundamental on-chain MetaID social data, similar to Bitcoin nodes, making it easy for anyone to run a decentralized social node. Unlike Bitcoin nodes, MetaSo focuses solely on social data rather than transaction data.
 
 # Base Protocols

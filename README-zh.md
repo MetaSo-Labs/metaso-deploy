@@ -1,4 +1,7 @@
-# **Introduction**
+# MetaSo
+
+[![English](https://img.shields.io/badge/English-README-blue)](README.md)
+[![中文](https://img.shields.io/badge/中文-README-red)](README-zh.md)
 
 MetaSo是一个基于MetaID-v2和MAN实现去中心化的开源基础服务包，集成最基础的链上相关MetaID社交数据，类似比特币节点一样便于任何人都能运行一个去中心化社交节点， 不同的是MetaSo只专注于社交数据而非交易数据。
 
