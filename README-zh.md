@@ -72,7 +72,7 @@ path:  `/protocols/subscribebuzz`
 {
     "publicContent": "{The public content}", //公开预览部分
     "encryptContent": "{Encrypted Content}", //密文
-    "contentType": "{Content Format, default is text/plain}"
+    "contentType": "{Content Format, default is text/plain}",
     "publicFiles": [
 		    "metafile://{pinid-1}", 
 			  "metafile://{pinid-2}",
@@ -94,7 +94,7 @@ path: `/protocols/paybuzz`
 {
     "publicContent": "{The public content}", //公开预览部分
     "encryptContent": "{Encrypted Content}", //密文
-    "contentType": "{Content Format, default is text/plain}"
+    "contentType": "{Content Format, default is text/plain}",
     "publicFiles": [
 		    "metafile://{pinid-1}", 
 			  "metafile://{pinid-2}",
@@ -114,7 +114,7 @@ path:  `/metaaccess/accesscontrol`
 
 ```json
 {
-	~~"publicContent": "public part of content",//公开部分内容
+	"publicContent": "public part of content",//公开部分内容
 	"publicPins":["PINID-1", "PINID-2"],//公开部分文件
 	"publicPath": "/protocols/simplepublicbuzz",~~
 	"controlPins":["PINID1","PINID2"], //Array of 'paybuzz' PINs that will be in control of accessing
