@@ -77,7 +77,7 @@ path: `/protocols/paybuzz`
 		    "metafile://{pinid-1}", 
 			  "metafile://{pinid-2}",
 			  ...,
-		],
+	],
     "encryptFiles": [
 		    "metafile://{pinid-21}", 
 		    "metafile://{pinid-22}",
@@ -99,7 +99,7 @@ path: `/protocols/subscribebuzz`
 		    "metafile://{pinid-1}", 
 			  "metafile://{pinid-2}",
 			  ...,
-		],
+	],
     "encryptFiles": [
 		    "metafile://{pinid-21}", 
 		    "metafile://{pinid-22}",
@@ -152,7 +152,7 @@ path: `/metaaccess/accesspass`
 
 To make MetaSo accessible to everyone, all programs are packaged into a single installation package, including one-click upgrade handling, ensuring all MetaSo nodes across the network can stay in sync.
 
-PS: If you need to view the tutorial on how to purchase a server, please refer to this tutorial.
+PS: If you need to view the tutorial on how to purchase a server, please refer to this [tutorial](#how-to-purchase-a-server).
 
 ## Quick Installation
 
@@ -164,7 +164,7 @@ PS: If you need to view the tutorial on how to purchase a server, please refer t
 
     ![image.png](res/install/image-install-1.png)
 
-    PS: If you need to delete and reinstall the installer, please refer to this tutorial.
+    PS: If you need to delete and reinstall the installer, please refer to this [tutorial](#how-to-remove-the-installer).
 
 2. Access the installer page at http://{server-IP}:7171 (port 7171 needs to be opened on your server)
 
@@ -237,7 +237,92 @@ PASSWORD=admin123456
 
 ## Troubleshooting
 
-For common deployment issues and solutions, please refer to our [troubleshooting guide](link-to-troubleshooting).
+### How to Purchase a Server
+
+1. Alibaba Cloud
+    1. Log in to your Alibaba Cloud account
+    2. Select "Lightweight Application Server" under Products and click "Buy Now"
+        ![image.png](res/faq-1/image-faq-1-1.png)
+        ![image.png](res/faq-1/image-faq-1-2.png)
+    3. Configure your instance:
+        - Instance Type: "Server Instance"
+        - Region: "Hong Kong"
+        - Image: Ubuntu 22.04 or higher
+        - Package configuration and data disk can be selected according to your needs
+        ![image.png](res/faq-1/image-faq-1-3.png)
+        ![image.png](res/faq-1/image-faq-1-4.png)
+    4. Click "Buy Now"
+    5. Go to the console, enter your server instance, click "Remote Connection" and "Login Now"
+        ![image.png](res/faq-1/image-faq-1-5.png)
+        ![image.png](res/faq-1/image-faq-1-6.png)
+    6. Before installing MetaSo, ensure your system is up to date by running: `sudo apt update && sudo apt upgrade -y`
+        ![image.png](res/faq-1/image-faq-1-7.png)
+
+2. Amazon AWS
+    **Coming soon**
+
+### How to Open Ports on Your Server
+
+1. Alibaba Cloud
+    1. Go to your server instance, click "Firewall", then "Add Rule"
+        ![image.png](res/faq-2/image-faq-2-1.png)
+    2. Enter the port range you need to open (e.g., 7171 or 3000) and click "Confirm"
+        ![image.png](res/faq-2/image-faq-2-2.png)
+
+2. Amazon AWS
+    **Coming soon**
+
+### Cannot Access http://{server-IP}:7171 After Deployment
+
+1. Check Firewall Status
+    You can check the firewall status on Linux systems using these methods:
+
+    1. Using `ufw` (if installed)
+        ```bash
+        sudo ufw status
+        ```
+        - Status: inactive means ufw is not enabled
+        - Status: active shows which ports are allowed/blocked
+
+    2. Using `firewalld` (if installed)
+        ```bash
+        sudo systemctl status firewalld
+        ```
+        - active (running) means firewalld is enabled
+        - inactive means firewalld is not enabled
+
+    3. Using `iptables`
+        ```bash
+        sudo iptables -L
+        ```
+        This command lists current iptables rules showing allowed/blocked ports
+
+2. Configure Firewall Ports
+    1. Using `ufw`
+        ```bash
+        sudo ufw status
+        sudo ufw allow 7171/tcp
+        ```
+
+    2. Using `iptables`
+        ```bash
+        sudo iptables -L
+        sudo iptables -A INPUT -p tcp --dport 7171 -j ACCEPT
+        ```
+
+### How to Remove the Installer
+1. Delete the `./metaso` folder and `metaso_boot.db`
+2. Run `sudo lsof -i:7171` and kill the process using `sudo kill {PID}`
+3. Delete the `/metaso` directory from the system root
+
+### Forgot Admin Dashboard Credentials?
+1. Modify `USERNAME` and `PASSWORD` in ./metaso/.env:
+    ```
+    ######### MetaSO ##################
+    USERNAME=admin
+    PASSWORD=admin123456
+    ```
+2. Visit http://{server-IP}:7171, click "Stop Service" then "Start Service" to restart and apply changes
 
 ## Security Notes
 
@@ -250,6 +335,3 @@ For common deployment issues and solutions, please refer to our [troubleshooting
 
 We welcome contributions! Please see our contributing guidelines for more details.
 
-## License
-
-[License Information TBD]
