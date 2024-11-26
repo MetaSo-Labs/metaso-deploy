@@ -152,7 +152,7 @@ path:  `/metaaccess/accesspass`
 
 为了便于任何人都能运行MetaSo，将所有程序都打包成一个安装包，包括升级也能一键化处理，使得全网每个MetaSo节点都能同步版本。
 
-PS：如需查看如何购买服务器，请查看[这里教程](https://www.notion.so/MetaSo-12de16594dde8073b465cb73de0ecf1c?pvs=21)
+PS：如需查看如何购买服务器，请查看[这里教程](#如何购买服务器)
 
 ## Install
 
@@ -166,7 +166,7 @@ PS：如需查看如何购买服务器，请查看[这里教程](https://www.not
     
     ![image.png](res/install/image-install-1.png)
     
-    PS：如果要删除重装安装器，请查看[重置教程](https://www.notion.so/MetaSo-12de16594dde8073b465cb73de0ecf1c?pvs=21)
+    PS：如果要删除重装安装器，请查看[重置教程](#如何删除安装器)
     
 3. 访问安装器页面 http://{服务器IP}:7171 （安装器默认端口7171，需要在服务器上打开防火墙7171端口），设置初始密码，该密码做为安装器的安全密码，妥善保管该密码！！
     
@@ -184,11 +184,11 @@ PS：如需查看如何购买服务器，请查看[这里教程](https://www.not
     
     ![image.png](res/install/image-install-5.png)
     
-4. 访问 http://{服务器IP}:3000 测试metaso服务是否安装成功（需要在服务器上开放防火墙3000端口，详细开放操作请[查看这里](https://www.notion.so/MetaSo-12de16594dde8073b465cb73de0ecf1c?pvs=21)）
+4. 访问 http://{服务器IP}:3000 测试metaso服务是否安装成功（需要在服务器上开放防火墙3000端口，详细开放操作请[查看这里](#如何在服务器上开放端口)）
     
     ![image.png](res/install/image-install-6.png)
     
-5. 访问 http://{服务器IP}:3000/dashboardLogin 可以进行管理员设置，管理员账号设置请[查看这里](https://www.notion.so/MetaSo-12de16594dde8073b465cb73de0ecf1c?pvs=21)
+5. 访问 http://{服务器IP}:3000/dashboardLogin 可以进行管理员设置，管理员账号设置请[查看这里](#如何在服务器上开放端口)
     
     ![image.png](res/install/image-install-7.png)
     
@@ -199,11 +199,11 @@ PS：如需查看如何购买服务器，请查看[这里教程](https://www.not
 
 ### 高级部署流程：
 
-待定
+**待开发中，尽请期待**
 
 ### 个人电脑安装流程：
 
-待定
+**待开发中，尽请期待**
 
 ## Upgrade
 
@@ -264,9 +264,10 @@ COMMON-API：
 
 ## **部署常见问题**
 
-1. **如何购买服务器**
-    1. 阿里云
-        1. 登录阿里云账号
+### 如何购买服务器
+
+1. 阿里云
+    1. 登录阿里云账号
         2. 选择产品，选择『轻量应用服务器』，点击『立即购买』
             
             ![image.png](res/faq-1/image-faq-1-1.png)
@@ -291,8 +292,10 @@ COMMON-API：
             ![image.png](res/faq-1/image-faq-1-7.png)
             
     2. 亚马逊
-2. **如何在服务器上开放端口**
-    1. 阿里云
+
+### 如何在服务器上开放端口
+
+1. 阿里云
         1. 进去服务器实例，点击『防火墙』，点击『添加规则』
             
             ![image.png](res/faq-2/image-faq-2-1.png)
@@ -302,9 +305,11 @@ COMMON-API：
             ![image.png](res/faq-2/image-faq-2-2.png)
             
     2. 亚马逊
-3. **部署完成和打开服务器端口后访问http://{服务器IP}:7171仍然无反应**
-    1. **检查服务器的防火墙状态**
-        
+    
+### 部署完成和打开服务器端口后访问http://{服务器IP}:7171仍然无反应
+
+1. 检查服务器的防火墙状态
+    
         在 Linux 系统上，可以通过以下方法检查防火墙状态，以了解当前是否启用了防火墙：
         
         ### **1. 使用 `ufw` 检查防火墙状态（如果安装了 `ufw`）**
@@ -343,8 +348,8 @@ COMMON-API：
         ### **4. 检查系统的默认防火墙配置**
         
         某些 Linux 发行版可能没有启用任何防火墙工具。在这种情况下，你可以直接确认是否安装了 **`ufw`**、**`firewalld`** 或 **`iptables`**，以确定是否有防火墙在运行。
-        
-    2. **检查服务器的防火墙端口设置**
+            
+2. 检查服务器的防火墙端口设置
         
         可能服务器内部防火墙也阻止了外部对 7171 端口的访问。你可以使用 **`ufw`** 或 **`iptables`** 进行配置。
         
@@ -376,11 +381,12 @@ COMMON-API：
         sudo iptables -A INPUT -p tcp --dport 7171 -j ACCEPT
         ```
         
-4. **如何删除安装器**
+### 如何删除安装器
     1. 删除`./metaso`的文件夹和`metaso_boot.db`
     2. 在命令行输入`sudo lsof -i:7171` ，执行`sudo kill {PIND}`kill掉对应`PID`
     3. 删除系统根目录的`/metaso`
-5. 忘记了后台管理员账号密码怎么办？
+
+### 忘记了后台管理员账号密码怎么办？
     1. 修改./metaso/.env配置文件中的`USERNAME`和`PASSWORD`
         
         ```json
