@@ -268,51 +268,55 @@ COMMON-API：
 
 1. 阿里云
     1. 登录阿里云账号
-        2. 选择产品，选择『轻量应用服务器』，点击『立即购买』
+    2. 选择产品，选择『轻量应用服务器』，点击『立即购买』
+        ![image.png](res/faq-1/image-faq-1-1.png)
             
-            ![image.png](res/faq-1/image-faq-1-1.png)
+        ![image.png](res/faq-1/image-faq-1-2.png)
             
-            ![image.png](res/faq-1/image-faq-1-2.png)
+    3. 选择配置，实例类型为『服务器实例』，地域为『中国香港』，镜像为系统镜像的『Ubuntu』22.04以上，套餐配置和数据盘和购买市场可以根据自己的情况选择，
             
-        3. 选择配置，实例类型为『服务器实例』，地域为『中国香港』，镜像为系统镜像的『Ubuntu』22.04以上，套餐配置和数据盘和购买市场可以根据自己的情况选择，
+        ![image.png](res/faq-1/image-faq-1-3.png)
             
-            ![image.png](res/faq-1/image-faq-1-3.png)
+        ![image.png](res/faq-1/image-faq-1-4.png)
             
-            ![image.png](res/faq-1/image-faq-1-4.png)
+    4. 点击『立即购买』
+    5. 点击控制台，进入自己的服务器实例，点击『远程链接』，点击『立即登录』
             
-        4. 点击『立即购买』
-        5. 点击控制台，进入自己的服务器实例，点击『远程链接』，点击『立即登录』
+        ![image.png](res/faq-1/image-faq-1-5.png)
             
-            ![image.png](res/faq-1/image-faq-1-5.png)
+        ![image.png](res/faq-1/image-faq-1-6.png)
             
-            ![image.png](res/faq-1/image-faq-1-6.png)
+    6. 即可进行命令行操作，进行MetaSo安装前，确保系统和已安装的软件包都是最新的，优先操作指令`sudo apt update && sudo apt upgrade -y` 
             
-        6. 即可进行命令行操作，进行MetaSo安装前，确保系统和已安装的软件包都是最新的，优先操作指令`sudo apt update && sudo apt upgrade -y` 
+        ![image.png](res/faq-1/image-faq-1-7.png)
             
-            ![image.png](res/faq-1/image-faq-1-7.png)
-            
-    2. 亚马逊
+2. 亚马逊
+
+    **待完善中，尽请期待**
 
 ### 如何在服务器上开放端口
 
 1. 阿里云
-        1. 进去服务器实例，点击『防火墙』，点击『添加规则』
+    
+    1. 进去服务器实例，点击『防火墙』，点击『添加规则』
             
-            ![image.png](res/faq-2/image-faq-2-1.png)
+        ![image.png](res/faq-2/image-faq-2-1.png)
             
-        2. 根据情况输入需要开放的端口范围，如7171或3000，点击『确认添加』
+    2. 根据情况输入需要开放的端口范围，如7171或3000，点击『确认添加』
             
-            ![image.png](res/faq-2/image-faq-2-2.png)
+        ![image.png](res/faq-2/image-faq-2-2.png)
             
-    2. 亚马逊
+2. 亚马逊
+
+    **待完善中，尽请期待**
     
 ### 部署完成和打开服务器端口后访问http://{服务器IP}:7171仍然无反应
 
 1. 检查服务器的防火墙状态
     
-        在 Linux 系统上，可以通过以下方法检查防火墙状态，以了解当前是否启用了防火墙：
+    在 Linux 系统上，可以通过以下方法检查防火墙状态，以了解当前是否启用了防火墙：
         
-        ### **1. 使用 `ufw` 检查防火墙状态（如果安装了 `ufw`）**
+    1. 使用 `ufw` 检查防火墙状态（如果安装了 `ufw`）
         
         **`ufw`**（Uncomplicated Firewall）是 Ubuntu 和一些其他 Linux 发行版上的常用防火墙工具。使用以下命令来检查状态：
         
@@ -323,7 +327,7 @@ COMMON-API：
         - 如果显示 **Status: inactive**，说明 **`ufw`** 没有启用。
         - 如果显示 **Status: active**，则 **`ufw`** 已启用，列出的规则显示了哪些端口被允许或阻止。
         
-        ### **2. 使用 `firewalld` 检查防火墙状态（如果安装了 `firewalld`）**
+    2. 使用 `firewalld` 检查防火墙状态（如果安装了 `firewalld`）
         
         某些 Linux 发行版使用 **`firewalld`** 作为防火墙管理工具。可以使用以下命令检查状态：
         
@@ -334,7 +338,7 @@ COMMON-API：
         - 如果输出中包含 **active (running)**，表示 **`firewalld`** 已启用。
         - 如果状态为 **inactive**，则 **`firewalld`** 没有启用。
         
-        ### **3. 使用 `iptables` 检查防火墙规则**
+    3. 使用 `iptables` 检查防火墙规则
         
         如果系统没有安装 **`ufw`** 或 **`firewalld`**，可以直接使用 **`iptables`** 命令来检查防火墙规则：
         
@@ -345,7 +349,7 @@ COMMON-API：
         - 这个命令会列出当前的 **`iptables`** 规则，显示哪些端口被允许或阻止。
         - 如果没有任何规则，或者默认策略是 **`ACCEPT`**，那么说明防火墙功能未启用或未设置任何规则。
         
-        ### **4. 检查系统的默认防火墙配置**
+    4. 检查系统的默认防火墙配置
         
         某些 Linux 发行版可能没有启用任何防火墙工具。在这种情况下，你可以直接确认是否安装了 **`ufw`**、**`firewalld`** 或 **`iptables`**，以确定是否有防火墙在运行。
             
@@ -353,7 +357,7 @@ COMMON-API：
         
         可能服务器内部防火墙也阻止了外部对 7171 端口的访问。你可以使用 **`ufw`** 或 **`iptables`** 进行配置。
         
-        ### **使用 `ufw`（如果启用）**
+        1. 使用 `ufw`（如果启用）
         
         查看 **`ufw`** 是否启用并开放了 7171 端口：
         
@@ -367,7 +371,7 @@ COMMON-API：
         sudo ufw allow 7171/tcp
         ```
         
-        ### **使用 `iptables`**
+        2. 使用 `iptables`
         
         你可以通过以下命令来查看当前 **`iptables`** 配置：
         
