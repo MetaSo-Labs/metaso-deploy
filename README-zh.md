@@ -294,8 +294,26 @@ COMMON-API：
         ![image.png](res/faq-1/image-faq-1-7.png)
             
 2. 亚马逊
+    1. 登录亚马逊账号
+    2. 选择产品，选择『计算』，进入『LightSail』控制台，创建实例
 
-    **待完善中，尽请期待**
+        ![image.png](res/faq-1/image-faq-1-11-1.png)
+
+        ![image.png](res/faq-1/image-faq-1-11-2.png)
+    
+    3. 选择需要部署的区域，系统类型选择Ubuntu.22.04及以上版本，套餐配置和数据盘和购买市场可以根据自己的情况选择
+
+        ![image.png](res/faq-1/image-faq-1-11-3.png)
+
+        ![image.png](res/faq-1/image-faq-1-11-4.png)
+
+    4. 创建好后返回控制台，进入服务器管理，【使用ssh连接】进入服务器
+
+        ![image.png](res/faq-1/image-faq-1-11-5.png)
+    
+    5. 即可进行命令行操作，进行MetaSo安装前，确保系统和已安装的软件包都是最新的，优先操作指令`sudo apt update && sudo apt upgrade -y` 
+
+        ![image.png](res/faq-1/image-faq-1-11-6.png)
 
 ### 如何在服务器上开放端口
 
@@ -311,7 +329,13 @@ COMMON-API：
             
 2. 亚马逊
 
-    **待完善中，尽请期待**
+    1. 进入『Lightsail』控制台，进入服务器管理，选择『联网』，点击『添加规则』
+    
+        ![image.png](res/faq-2/image-faq-2-11-1.png)
+    
+    2. 根据情况输入需要开放的端口范围，如7171或3000，点击『创建』
+    
+        ![image.png](res/faq-2/image-faq-2-11-2.png)
     
 ### 部署完成和打开服务器端口后访问http://{服务器IP}:7171仍然无反应
 
