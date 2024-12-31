@@ -264,16 +264,16 @@ PASSWORD=admin123456
 2. Amazon AWS
     1. Log in to your Amazon AWS account
     2. Select "Compute" under Products and click "LightSail"
-        ![image.png](res/faq-1/image-faq-1-11-1.png)
-        ![image.png](res/faq-1/image-faq-1-11-2.png)
+        ![image.png](res/faq-1/image-faq-en-1-11-1.png)
+        ![image.png](res/faq-1/image-faq-en-1-11-2.png)
     3. Create an instance:
         - Region: "Singapore"
         - Image: Ubuntu 22.04 or higher
         - Package configuration and data disk can be selected according to your needs
-        ![image.png](res/faq-1/image-faq-1-11-3.png)
-        ![image.png](res/faq-1/image-faq-1-11-4.png)
+        ![image.png](res/faq-1/image-faq-en-1-11-3.png)
+        ![image.png](res/faq-1/image-faq-en-1-11-4.png)
     4. After creation, return to the console, enter your server instance, click "Remote Connection" and "Login Now"
-        ![image.png](res/faq-1/image-faq-1-11-5.png)
+        ![image.png](res/faq-1/image-faq-en-1-11-5.png)
     5. Before installing MetaSo, ensure your system is up to date by running: `sudo apt update && sudo apt upgrade -y`
         ![image.png](res/faq-1/image-faq-1-11-6.png)
 
@@ -287,9 +287,9 @@ PASSWORD=admin123456
 
 2. Amazon AWS
     1. Enter your server instance, click "Networking", then "Add Rule"
-        ![image.png](res/faq-2/image-faq-2-11-1.png)
+        ![image.png](res/faq-2/image-faq-en-2-11-1.png)
     2. Enter the port range you need to open (e.g., 7171 or 3000) and click "Create"
-        ![image.png](res/faq-2/image-faq-2-11-2.png)
+        ![image.png](res/faq-2/image-faq-en-2-11-2.png)
 
 ### Cannot Access http://{server-IP}:7171 After Deployment
 
