@@ -162,7 +162,7 @@ PS: If you need to view the tutorial on how to purchase a server, please refer t
 1. Execute the following command on your server to start the installer:
 
     ```bash
-    wget -qO- https://github.com/metaid-developers/metaso/releases/download/v0.1/installmetaso_boot.sh | sudo bash
+    wget -qO- https://github.com/metaid-developers/metaso/releases/download/v0.1/install_metaso_boot.sh | sudo bash
     ```
 
     ![image.png](res/install/image-install-1.png)
