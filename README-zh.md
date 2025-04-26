@@ -163,7 +163,9 @@ PS：如需查看如何购买服务器，请查看[这里教程](#如何购买�
 
 1. 在服务器 ubuntu22.04系统上执行以下命令启动安装器：
     
+    ```bash
     wget -qO- https://github.com/MetaSo-Labs/metaso_updater/releases/download/pro/install_metaso_boot.sh | sudo bash
+    ```
     
 2. 提示：Running the executable…  表示安装器已启动成功
     
