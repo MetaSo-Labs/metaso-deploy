@@ -155,6 +155,13 @@ path: `/metaaccess/accesspass`
 
 To make MetaSo accessible to everyone, all programs are packaged into a single installation package, including one-click upgrade handling, ensuring all MetaSo nodes across the network can stay in sync.
 
+Machine configuration requirements (minimum):
+
+- Processor: 2 cores
+- Memory: 4GB
+- Disk: 128GB
+- Operating system: Ubuntu 22.04 or higher
+
 PS: If you need to view the tutorial on how to purchase a server, please refer to this [tutorial](#how-to-purchase-a-server).
 
 ## Quick Installation
