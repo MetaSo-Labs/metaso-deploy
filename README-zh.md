@@ -157,9 +157,9 @@ path:  `/metaaccess/accesspass`
 
 机器配置最低要求：
 
-- CPU：2核
-- 内存：4GB
-- 硬盘：128GB
+- 处理器：2 cores
+- 内存：4GB RAM
+- 硬盘：128GB available space
 - 操作系统：Ubuntu 22.04及以上
 
 PS：如需查看如何购买服务器，请查看[这里教程](#如何购买服务器)
