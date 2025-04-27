@@ -157,7 +157,7 @@ path:  `/metaaccess/accesspass`
 
 机器配置最低要求：
 
-- 处理器：2核
+- CPU：2核
 - 内存：4GB
 - 硬盘：128GB
 - 操作系统：Ubuntu 22.04及以上

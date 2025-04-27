@@ -157,10 +157,10 @@ To make MetaSo accessible to everyone, all programs are packaged into a single i
 
 Machine configuration requirements (minimum):
 
-- Processor: 2 cores
+- CPU: 2 cores
 - Memory: 4GB
 - Disk: 128GB
-- Operating system: Ubuntu 22.04 or higher
+- OS: Ubuntu 22.04 or higher
 
 PS: If you need to view the tutorial on how to purchase a server, please refer to this [tutorial](#how-to-purchase-a-server).
 
