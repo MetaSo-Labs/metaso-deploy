@@ -228,16 +228,11 @@ PS：如需查看如何购买服务器，请查看[这里教程](#如何购买�
 
 ## Setting
 
-1. 修改Admin账号
-    1. 修改./metaso/.env配置文件中的`USERNAME`和`PASSWORD`
-        
-        ```json
-        ######### MetaSO ##################
-        USERNAME=admin
-        PASSWORD=admin123456
-        ```
-        
-    2. 访问安装器页面 http://{服务器IP}:7171，点击『stop service』后再点击『start service』重启服务，配置文件即可生效
+1. 绑定管理员钱包
+
+    访问 http://{服务器IP}:3000/dashboardLogin，使用Metalet钱包登录，注意：首次登录的钱包即为管理员钱包，请妥善保管，后台会绑定对应钱包的地址
+
+    ![image.png](res/setting/image-setting-4.png)
 
 2. 修改样式
     

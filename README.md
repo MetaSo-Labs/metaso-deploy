@@ -218,13 +218,11 @@ Coming soon
 
 ## Configuration
 
-### Admin Account Setup
-1. Modify `USERNAME` and `PASSWORD` in ./metaso/.env:
-```
-USERNAME=admin
-PASSWORD=admin123456
-```
-2. Restart service through the installer page
+### Bind Admin Wallet
+
+Visit http://{server-IP}:3000/dashboardLogin and log in using your Metalet wallet. Note: The first wallet to log in will be registered as the admin wallet. Keep your wallet secure, as the system will bind to that wallet address.
+
+![image.png](res/setting/image-setting-4.png)
 
 ### Additional Settings
 - Customize appearance
