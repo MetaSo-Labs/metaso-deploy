@@ -198,7 +198,7 @@ PS: If you need to view the tutorial on how to purchase a server, please refer t
 
 4. Access admin settings at http://{server-IP}:3000/dashboardLogin
 
-    ![image.png](res/install/image-setting-4.png)
+    ![image.png](res/install/image-install-8.png)
 
 5. API documentation available at http://{server-IP}:7172 (Coming soon)
 
