@@ -202,7 +202,7 @@ PS：如需查看如何购买服务器，请查看[这里教程](#如何购买�
     
 5. 访问 http://{服务器IP}:3000/dashboardLogin 可以进行管理员设置，管理员账号设置请[查看这里](#如何在服务器上开放端口)
     
-    ![image.png](res/install/image-install-7.png)
+    ![image.png](res/install/image-setting-4.png)
     
 6. 访问 http://{服务器IP}:7172 可以查看接口文档（需要在服务器上开放防火墙7172端口）
     

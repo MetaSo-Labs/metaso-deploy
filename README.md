@@ -198,7 +198,7 @@ PS: If you need to view the tutorial on how to purchase a server, please refer t
 
 4. Access admin settings at http://{server-IP}:3000/dashboardLogin
 
-    ![image.png](res/install/image-install-7.png)
+    ![image.png](res/install/image-setting-4.png)
 
 5. API documentation available at http://{server-IP}:7172 (Coming soon)
 
@@ -339,26 +339,6 @@ Visit http://{server-IP}:3000/dashboardLogin and log in using your Metalet walle
 2. Run `sudo lsof -i:7171` and kill the process using `sudo kill {PID}`
 3. Delete the `/metaso` directory from the system root
 
-### Forgot Admin Dashboard Credentials?
-1. Modify `USERNAME` and `PASSWORD` in ./metaso/.env:
-    ```
-    ######### MetaSO ##################
-    USERNAME=admin
-    PASSWORD=admin123456
-    ```
-2. Visit http://{server-IP}:7171, click "Stop Service" then "Start Service" to restart and apply changes
-
-## Security Notes
-
-- Always secure your admin credentials
-- Regularly update your installation
-- Configure firewalls appropriately
-- Back up your configuration files
-
-## Contributing
-
-We welcome contributions! Please see our contributing guidelines for more details.
-
 ### Handling Update Issues from Old Installer Versions
 
 If you encounter issues updating from an older installer version, follow these steps:
@@ -382,4 +362,18 @@ If you encounter issues updating from an older installer version, follow these s
     ```bash
     wget -qO- https://github.com/MetaSo-Labs/metaso_updater/releases/download/pro/install_metaso_boot.sh | sudo bash
     ```
+
+
+## Security Notes
+
+- Always secure your admin credentials
+- Regularly update your installation
+- Configure firewalls appropriately
+- Back up your configuration files
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines for more details.
+
+
 
