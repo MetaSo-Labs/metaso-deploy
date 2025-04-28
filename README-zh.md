@@ -426,13 +426,26 @@ COMMON-API：
     2. 在命令行输入`sudo lsof -i:7171` ，执行`sudo kill {PIND}`kill掉对应`PID`
     3. 删除系统根目录的`/metaso`
 
-### 忘记了后台管理员账号密码怎么办？
-    1. 修改./metaso/.env配置文件中的`USERNAME`和`PASSWORD`
-        
-        ```json
-        ######### MetaSO ##################
-        USERNAME=admin
-        PASSWORD=admin123456
-        ```
-        
-    2. 访问安装器页面 http://{服务器IP}:7171，点击『stop service』后再点击『start service』重启服务，配置文件即可生效
+### 从旧版本安装器升级导致无法更新的异常处理
+
+如果您从旧版本安装器升级后遇到无法更新的异常，可以按以下步骤处理：
+
+1. 重启服务器
+    ```bash
+    sudo reboot
+    ```
+
+2. 删除旧的安装器
+    ```bash
+    rm /metaso/boot
+    ```
+
+3. 删除升级器数据文件
+    ```bash
+    rm /metaso/metaso_boot.db
+    ```
+
+4. 重新安装最新版本的安装器
+    ```bash
+    wget -qO- https://github.com/MetaSo-Labs/metaso_updater/releases/download/pro/install_metaso_boot.sh | sudo bash
+    ```

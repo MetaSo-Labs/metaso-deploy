@@ -361,3 +361,27 @@ PASSWORD=admin123456
 
 We welcome contributions! Please see our contributing guidelines for more details.
 
+### Handling Update Issues from Old Installer Versions
+
+If you encounter issues updating from an older installer version, follow these steps:
+
+1. Restart your server
+    ```bash
+    sudo reboot
+    ```
+
+2. Delete the old installer
+    ```bash
+    rm /metaso/boot
+    ```
+
+3. Delete the upgrade data file
+    ```bash
+    rm /metaso/metaso_boot.db
+    ```
+
+4. Reinstall the latest version of the installer
+    ```bash
+    wget -qO- https://github.com/MetaSo-Labs/metaso_updater/releases/download/pro/install_metaso_boot.sh | sudo bash
+    ```
+
